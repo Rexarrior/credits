@@ -15,7 +15,7 @@ double countBySympson(double (*func)(double), double left, double right)
 
     double result = factor * (fleft + 4 * fmidle + fright);
 
-    std:: cout << "Sympson's function has returned:" << result << std:: endl;
+    // std:: cout << "Sympson's function has returned:" << result << std:: endl;
     return result;
 }
 
@@ -23,7 +23,7 @@ double countBySympson(double (*func)(double), double left, double right)
 double integrate(double (*func)(double), double leftWall, double rightWall, int dotCount )
 {
 
-    double step = (rightWall + leftWall) / dotCount; 
+    double step = (rightWall - leftWall) / dotCount; 
 
     double current = leftWall + step;
     double result = countBySympson(func,leftWall, current);

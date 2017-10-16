@@ -178,13 +178,19 @@ void test_genZigZagMatrix()
 {
     int countColumn;
     int countLine; 
-    readMatrixSize(&countLine, &countColumn);
     
+    readMatrixSize(&countLine, &countColumn);
+    cout << "Заполнять вертикальным зигзагом? y/n:";
+    char answ;
+    cin >> answ; 
+     
 
 
     cout << "the array is generated...";
-    int* matrix = genZigZagMatrix(countLine,countColumn);
+    int* matrix = genZigZagMatrix(countLine,countColumn, answ == 'y');
     cout << "done." << endl;
+
+
     cout << "the array will printed by \" printlnMatrix \"  "  << endl; 
     printlnMatrix(matrix,countLine,countColumn,7);
 
@@ -294,7 +300,7 @@ void cycle()
 
 int main(int count, char* args[])
 {   
-  cycle();
-   
+   cycle();
+   //cout << integrate([](double x){return sin(x);},1,2,100);
   return 0;
 }
