@@ -14,7 +14,7 @@
 
 int* genRandomMatrix(int, int );
 
-int* genZigZagMatrix(int,int);
+int* genZigZagMatrix(int,int, bool);
 
 template<typename T>
 void printlnMatrix(T* matrix, int countLine,  int countColumn, const int fieldWidth = 7 , const  int precisionValue = 5)
