@@ -10,7 +10,7 @@ using namespace std;
 
 int* genRandomMatrix(int countLine, int countColumn)
 {
-    int* matrix = new int[countLine, countColumn];
+    int* matrix = new int[countLine * countColumn];
 
     for (int i = 0; i < countLine; i++)
     {
@@ -41,7 +41,7 @@ bool chechWall(bool isUp, int i, int j, int countLine, int countColumn)
 
 int* genZigZagMatrix(int countLine, int countColumn, bool isVertical)
 {
-    int* matrix = new int[countLine,countColumn];
+    int* matrix = new int[countLine * countColumn];
     
     
         int counter = 0; 
