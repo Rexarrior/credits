@@ -169,7 +169,7 @@ void test_printlArray()
     cout << "the array will printed by \" printlnMatrix \"  "  << endl; 
     printlnMatrix<int>(matrix, countLine, countColumn);
     cout << "done." << endl;
-
+    delete [] matrix;
     cout << "End of testing. " << endl;
 }
 
@@ -193,7 +193,7 @@ void test_genZigZagMatrix()
 
     cout << "the array will printed by \" printlnMatrix \"  "  << endl; 
     printlnMatrix(matrix,countLine,countColumn,7);
-
+    delete [] matrix; 
     cout << "End of testing." << endl;
 
 }
