@@ -180,7 +180,7 @@ void test_genZigZagMatrix()
     int countLine; 
     
     readMatrixSize(&countLine, &countColumn);
-    cout << "Заполнять вертикальным зигзагом? y/n:";
+    cout << "Fill by virtical zigzag? y/n:";
     char answ;
     cin >> answ; 
      
