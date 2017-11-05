@@ -202,11 +202,11 @@ public:
         for (auto i = begin(); i!=end(); ++i)
         {
             if ((*i).first == key)
-            {   cout << "find return " << (*i).first << ' ' << (*i).second << endl; 
+            {  // cout << "find return " << (*i).first << ' ' << (*i).second << endl; 
                 return i;
             }
         }
-        cout << "find return end()" << endl;
+       // cout << "find return end()" << endl;
         return this->end();
     }
 
