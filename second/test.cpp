@@ -1,4 +1,5 @@
 
+#include "stdafx.h"
 #include <string>
 #include <vector>
 #include "dictionary.h"
@@ -7,7 +8,7 @@
 
 int main(int count, char* args[])
 {
-	setlocale(LC_ALL, "");
+	setlocale(LC_ALL, "ru");
 	
 	const int testCollectionsSize = 10;
 
@@ -16,10 +17,10 @@ int main(int count, char* args[])
 	dict.printlnInConsole();
 	cout << "Enter  strs: " << endl;
 	vector<string> strs(0);
-	for (int i = 0; i< testCollectionsSize ; i++)
+	for (int i = 0; i< testCollectionsSize ; ++i)
 	{
 		
-		cout << "Enter str �" << i;
+		cout << "Enter str №" << i;
 		string s; 
 		getline(cin, s);
 		strs.push_back(s);
@@ -46,11 +47,12 @@ int main(int count, char* args[])
 	dict.remove(5);
 	bool isFindLessdWork = dict.find(5) == dict.end();
 
-	cout << "������������ ������� " <<( isSizeWork ? "" : "�� ") << "��������. " << endl; 
-	cout << "����� ������������  " << (isFindWork ? "" : "�� ") << "��������. " << endl;
-	cout << "����� �� ������������  " << (isFindWork ? "" : "�� ") << "��������. " << endl;
+	cout << "Size check is " <<( isSizeWork ? "" : "not ") << "work. " << endl; 
+	cout << "Find existing is   " << (isFindWork ? "" : "not ") << "work. " << endl;
+	cout << "Find not existing is   " << (isFindWork ? "" : "not ") << "work. " << endl;
 
-
+	for (auto i = dict.begin(); i != dict.end(); ++i)
+		cout << (*i).first << ':' << (*i).second << ' ';
 
 	system("pause");
 	return 0;
