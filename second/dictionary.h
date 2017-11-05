@@ -219,9 +219,9 @@ public:
 
 
 
-    pair<Key, Value> operator [] (Key key)
+     Value operator [] (Key key)
     {
-        return *(this->find(key));
+        return *(this->find(key)).second;
     }
 
 
